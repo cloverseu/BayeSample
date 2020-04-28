@@ -6,13 +6,22 @@ library(ggvis)
 library(shinyBS)
 library(plotly)
 library(rsconnect)
-source("D:\\软件\\大论文\\sampleApp\\BayeSample\\classfication\\normal.R", encoding="utf-8")
-source("D:\\软件\\大论文\\sampleApp\\BayeSample\\classfication\\proportion.R", encoding="utf-8")
-source("D:\\软件\\大论文\\sampleApp\\BayeSample\\classfication\\assurance.R", encoding="utf-8")
-source("D:\\软件\\大论文\\sampleApp\\BayeSample\\classfication\\classicalSize.R", encoding="utf-8")
-source("D:\\软件\\大论文\\sampleApp\\BayeSample\\classfication\\bayesFactorSSD.R", encoding="utf-8")
-source("D:\\软件\\大论文\\sampleApp\\BayeSample\\classfication\\ppSSR.R", encoding="utf-8")
-#library(SampleSizeMeans)
+sourcePath <- paste0(getwd(),"classfication")
+
+source(paste0(sourcePath,"/normal.R"), encoding="utf-8")
+source(paste0(sourcePath,"/proportion.R"), encoding="utf-8")
+source(paste0(sourcePath,"/assurance.R"), encoding="utf-8")
+source(paste0(sourcePath,"/classicalSize.R"), encoding="utf-8")
+source(paste0(sourcePath,"/bayesFactorSSD.R"), encoding="utf-8")
+source(paste0(sourcePath,"/ppSSR.R"), encoding="utf-8")
+
+# source("D:\\软件\\大论文\\sampleApp\\BayeSample\\classfication\\normal.R", encoding="utf-8")
+# source("D:\\软件\\大论文\\sampleApp\\BayeSample\\classfication\\proportion.R", encoding="utf-8")
+# source("D:\\软件\\大论文\\sampleApp\\BayeSample\\classfication\\assurance.R", encoding="utf-8")
+# source("D:\\软件\\大论文\\sampleApp\\BayeSample\\classfication\\classicalSize.R", encoding="utf-8")
+# source("D:\\软件\\大论文\\sampleApp\\BayeSample\\classfication\\bayesFactorSSD.R", encoding="utf-8")
+# source("D:\\软件\\大论文\\sampleApp\\BayeSample\\classfication\\ppSSR.R", encoding="utf-8")
+# #library(SampleSizeMeans)
 
 wwwPath <- paste0(getwd(),"/www")
 addResourcePath("localfiles", wwwPath)
@@ -24,7 +33,7 @@ addResourcePath("localfiles", wwwPath)
 
 
 
-rsconnect::deployApp("D:\\软件\\大论文\\sampleApp\\BayeSample")
+#rsconnect::deployApp("D:\\软件\\大论文\\sampleApp\\BayeSample")
 
 shinyServer(function(input, output, session) {
   
