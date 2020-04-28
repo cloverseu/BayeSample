@@ -1,0 +1,10 @@
+name: bayesample
+title:
+username:
+account: bayessd
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2193694
+bundleId: 3071176
+url: https://bayessd.shinyapps.io/bayesample/
+when: 1587985721.95701
